@@ -1,0 +1,44 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('articles', function (Blueprint $table) {
+            $table->id();
+            $table->unsignedBigInteger('catetgory_id');
+            $table->foreign('catetgory_id')->references('id')->on('categories')->onDelete('cascade')->onUpdate('cascade');
+            $table->unsignedBigInteger('author_id');
+            $table->foreign('author_id')->references('id')->on('authors')->onDelete('cascade')->onUpdate('cascade');
+            $table->longText('title');
+            $table->longText('doi');
+            $table->date('pub_date');
+            $table->longText('abstract');
+            $table->string('cover');
+            $table->longText('link');
+            $table->string('publisher');
+            $table->string('citation');
+            $table->unsignedTinyInteger('status')->default(1)->comment('1=>Active,2=>Inactive');
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('articles');
+    }
+};
