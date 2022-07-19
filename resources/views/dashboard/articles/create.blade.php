@@ -32,11 +32,18 @@
                             </select>
                         </div>
                         <div class="mb-3">
-                            <label for="catetgory_id" class="form-label">Category<span class="text-danger">*</span></label>
-                            <select name="catetgory_id" id="catetgory_id" class="form-control" required>
-                                <option value="">Select One</option>
-                                @foreach ($categories as $category)
-                                <option value="{{$category->id}}">{{$category->name}}</option>
+                            <label for="author_ids" class="form-label">Authors<span class="text-danger">*</span></label>
+                            <select name="author_ids[]" id="author_ids" class="form-control author_ids" required multiple="multiple">
+                                @foreach ($authors as $author)
+                                <option value="{{$author->id}}">{{$author->name}}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="researchers" class="form-label">Resercher</label>
+                            <select name="researchers[]" id="researchers" class="form-control researchers" multiple="multiple">
+                                @foreach ($researchers as $researcher)
+                                <option value="{{$researcher->id}}">{{$researcher->name}}</option>
                                 @endforeach
                             </select>
                         </div>
@@ -74,5 +81,10 @@
 </div>
 @endsection
 @section('script')
-
+<script>
+    $(document).ready(function() {
+        $('.author_ids').select2();
+        $('.researchers').select2();
+    });
+</script>
 @endsection

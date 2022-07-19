@@ -18,11 +18,11 @@ use App\Http\Controllers\ArticleController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Auth::routes();
+Route::get('/', [HomeController::class, 'index'])->name('index');
+Route::get('/ourResearchers', [HomeController::class, 'ourResearchers'])->name('ourResearchers');
+Route::get('/publications', [HomeController::class, 'publications'])->name('publications');
 
 Route::group(['middleware' => 'auth'], function() {
     Route::get('/vrdadmin', [HomeController::class, 'vrdadmin'])->name('vrdadmin');
@@ -31,3 +31,5 @@ Route::group(['middleware' => 'auth'], function() {
     Route::resource('researchers', ResearcherController::class);
     Route::resource('articles', ArticleController::class);
 });
+
+

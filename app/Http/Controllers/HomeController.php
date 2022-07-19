@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Article;
+use App\Models\Category;
+use App\Models\Researcher;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -14,8 +17,25 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('welcome');
+        $articles = Article::all();
+        $researchers = Researcher::all();
+        return view('welcome',compact('article','researchers'));
     }
+
+    // Our Researcher Page
+    public function ourResearchers()
+    {
+        $researchers = Researcher::all();
+        return view('our-researcher',compact('researchers'));
+    }
+    // Publication Page
+    public function publications()
+    {
+        $categories = Category::all();
+        $articles = Article::all();
+        return view('publication',compact('articles','categories'));
+    }
+
 
     public function vrdadmin()
     {

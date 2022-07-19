@@ -6,8 +6,10 @@ use App\Models\Article;
 use App\Http\Requests\StoreArticleRequest;
 use App\Http\Requests\UpdateArticleRequest;
 use App\Models\Author;
+use App\Models\AuthorArticle;
 use App\Models\Category;
 use App\Models\Researcher;
+use App\Models\ResearcherArticle;
 
 class ArticleController extends Controller
 {
@@ -43,7 +45,47 @@ class ArticleController extends Controller
      */
     public function store(StoreArticleRequest $request)
     {
-        //
+
+        $article = new Article();
+        $article->title = $request->title;
+        $article->doi = $request->doi;
+        $article->catetgory_id = $request->catetgory_id;
+        $article->pub_date = $request->pub_date;
+        $article->abstract = $request->abstract;
+        $article->link = $request->link;
+        $article->publisher = $request->publisher;
+        $article->citation = $request->citation;
+
+        if ($request->hasFile('cover')) {
+            $profilepic = $request->file('cover');
+            $photoName = $request->first_name.time().$profilepic->getClientOriginalName();
+            $path = public_path('images/articles/cover/');
+            $image_url = 'images/articles/cover/'.$photoName;
+            $success = $profilepic->move($path, $photoName);
+            $article->cover = $image_url;
+        }
+
+        $article->save();
+
+        if ($request->author_ids) {
+            foreach ($request->author_ids as $author_id) {
+                $aa = new AuthorArticle();
+                $aa->author_id = $author_id;
+                $aa->article_id = $article->id;
+                $aa->save();
+            }
+        }
+        if ($request->researchers) {
+            foreach ($request->researchers as $researcher) {
+                $ra = new ResearcherArticle();
+                $ra->researcher_id = $researcher;
+                $ra->article_id = $article->id;
+                $ra->save();
+            }
+        }
+
+        return redirect()->route('articles.index')->withSuccess(__('Article deleted.'));
+
     }
 
     /**
@@ -54,7 +96,7 @@ class ArticleController extends Controller
      */
     public function show(Article $article)
     {
-        //
+        return view('dashboard.articles.show',compact('article'));
     }
 
     /**
@@ -65,7 +107,20 @@ class ArticleController extends Controller
      */
     public function edit(Article $article)
     {
-        //
+        $categories = Category::all();
+        $authors = Author::all();
+        $researchers = Researcher::all();
+
+        $authorsids = [];
+        $researcherids = [];
+        foreach ($article->authours as $authour) {
+            array_push($authorsids, $authour->id);
+        }
+        foreach ($article->researchers as $researcher) {
+            array_push($researcherids, $researcher->id);
+        }
+
+        return view('dashboard.articles.edit',compact('article','categories','authors','researchers','authorsids','researcherids'));
     }
 
     /**
@@ -77,7 +132,44 @@ class ArticleController extends Controller
      */
     public function update(UpdateArticleRequest $request, Article $article)
     {
-        //
+        $article->title = $request->title;
+        $article->doi = $request->doi;
+        $article->catetgory_id = $request->catetgory_id;
+        $article->pub_date = $request->pub_date;
+        $article->abstract = $request->abstract;
+        $article->link = $request->link;
+        $article->publisher = $request->publisher;
+        $article->citation = $request->citation;
+
+        if ($request->hasFile('cover')) {
+            $profilepic = $request->file('cover');
+            $photoName = $request->first_name.time().$profilepic->getClientOriginalName();
+            $path = public_path('images/articles/cover/');
+            $image_url = 'images/articles/cover/'.$photoName;
+            $success = $profilepic->move($path, $photoName);
+            $article->cover = $image_url;
+        }
+
+        $article->save();
+
+        if ($request->author_ids) {
+            foreach ($request->author_ids as $author_id) {
+                $aa = new AuthorArticle();
+                $aa->author_id = $author_id;
+                $aa->article_id = $article->id;
+                $aa->save();
+            }
+        }
+        if ($request->researchers) {
+            foreach ($request->researchers as $researcher) {
+                $ra = new ResearcherArticle();
+                $ra->researcher_id = $researcher;
+                $ra->article_id = $article->id;
+                $ra->save();
+            }
+        }
+
+        return redirect()->route('articles.show',$article->id)->withSuccess(__('Article updated.'));
     }
 
     /**
@@ -88,6 +180,7 @@ class ArticleController extends Controller
      */
     public function destroy(Article $article)
     {
-        //
+        $article->delete();
+        return redirect()->route('articles.index')->withSuccess(__('Article deleted.'));
     }
 }
