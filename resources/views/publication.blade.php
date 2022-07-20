@@ -10,20 +10,11 @@
                 <div class="category-text">
                     <h2>Catergory</h2>
                 </div>
-                <a href="#">Bagging Algorithm</a>
-                <a href="#">COMPUTER SIMULATION AND HEALTH INFORMATICS</a>
-                <a href="#">Machine Learning</a>
-                <a href="#">Machine Learning</a>
-                <a href="#">Bagging Algorithm</a>
-                <a href="#">Bagging Algorithm</a>
-                <a href="#">COMPUTER SIMULATION AND HEALTH INFORMATICS</a>
-                <a href="#">Bagging Algorithm</a>
-                <a href="#">Machine Learning</a>
-                <a href="#">Machine Learning</a>
-                <a href="#">Bagging Algorithm</a>
-                <a href="#">Bagging Algorithm</a>
-
-
+                @forelse ($categories as $category)
+                <a href="{{route('category', $category->id)}}">{{$category->name}}</a>
+                @empty
+                <p>No category founded.</p>
+                @endforelse
             </div>
         </div>
     </section>
@@ -35,144 +26,37 @@
         <div class="blog_area">
             <div class="container">
                 <div class="row">
+                    @forelse ($articles as $article)
                     <div class="col-md-6 col-sm-12">
                         <div class="blog-post">
                             <div class="blog-img">
-                                <img src="./img/blog-img/blog1.jpg" alt="">
+                                <img src="{{asset($article->cover)}}" alt="{{$article->title}}">
                             </div>
                             <div class="blog_content">
                                 <div class="blog-category-name">
-                                    <p>Bagging Algorithm</p>
+                                    <p>{{$article->category->name}}</p>
                                 </div>
                                 <div class="blog_name">
-                                    <a href="./read-articel.html">Prediction of Recurrence and Non recurrence Events of
-                                        Breast Cancer
-                                        using Bagging Algorithm</a>
+                                    <a href="">{{$article->title}}</a>
                                 </div>
                                 <div class="blog_author">
-                                    <p>by, <a href="#">Mehedi Hassan et. al</a></p>
+
+
+                                    <p>by, @foreach ($article->authours as $author)
+                                        <a href="{{$author->link}}">{{$author->name}}</a>
+                                        @endforeach
+                                    </p>
+
                                 </div>
                                 <div class="post_date">
-                                    <p> - June 27, 2022</p>
+                                    <p> - {{date('M d, Y', strtotime($article->pub_date))}}</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-sm-12">
-                        <div class="blog-post">
-                            <div class="blog-img">
-                                <img src="./img/blog-img/blog2.jpg" alt="">
-                            </div>
-                            <div class="blog_content">
-                                <div class="blog-category-name">
-                                    <p>Bagging Algorithm</p>
-                                </div>
-                                <div class="blog_name">
-                                    <a href="./read-articel.html">Prediction of Recurrence and Non recurrence Events of
-                                        Breast Cancer
-                                        using Bagging Algorithm</a>
-                                </div>
-                                <div class="blog_author">
-                                    <p>by, <a href="#">Mehedi Hassan et. al</a></p>
-                                </div>
-                                <div class="post_date">
-                                    <p> - June 27, 2022</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-sm-12">
-                        <div class="blog-post">
-                            <div class="blog-img">
-                                <img src="./img/blog-img/blog3.jpg" alt="">
-                            </div>
-                            <div class="blog_content">
-                                <div class="blog-category-name">
-                                    <p>Bagging Algorithm</p>
-                                </div>
-                                <div class="blog_name">
-                                    <a href="./read-articel.html">Prediction of Recurrence and Non recurrence Events of
-                                        Breast Cancer
-                                        using Bagging Algorithm</a>
-                                </div>
-                                <div class="blog_author">
-                                    <p>by, <a href="#">Mehedi Hassan et. al</a></p>
-                                </div>
-                                <div class="post_date">
-                                    <p> - June 27, 2022</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-sm-12">
-                        <div class="blog-post">
-                            <div class="blog-img">
-                                <img src="./img/blog-img/blog4.jpg" alt="">
-                            </div>
-                            <div class="blog_content">
-                                <div class="blog-category-name">
-                                    <p>Bagging Algorithm</p>
-                                </div>
-                                <div class="blog_name">
-                                    <a href="./read-articel.html">Prediction of Recurrence and Non recurrence Events of
-                                        Breast Cancer
-                                        using Bagging Algorithm</a>
-                                </div>
-                                <div class="blog_author">
-                                    <p>by, <a href="#">Mehedi Hassan et. al</a></p>
-                                </div>
-                                <div class="post_date">
-                                    <p> - June 27, 2022</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-sm-12">
-                        <div class="blog-post">
-                            <div class="blog-img">
-                                <img src="./img/blog-img/blog5.jpg" alt="">
-                            </div>
-                            <div class="blog_content">
-                                <div class="blog-category-name">
-                                    <p>Bagging Algorithm</p>
-                                </div>
-                                <div class="blog_name">
-                                    <a href="./read-articel.html">Prediction of Recurrence and Non recurrence Events of
-                                        Breast Cancer
-                                        using Bagging Algorithm</a>
-                                </div>
-                                <div class="blog_author">
-                                    <p>by, <a href="#">Mehedi Hassan et. al</a></p>
-                                </div>
-                                <div class="post_date">
-                                    <p> - June 27, 2022</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-sm-12">
-                        <div class="blog-post">
-                            <div class="blog-img">
-                                <img src="./img/blog-img/blog6.jpg" alt="">
-                            </div>
-                            <div class="blog_content">
-                                <div class="blog-category-name">
-                                    <p>Bagging Algorithm</p>
-                                </div>
-                                <div class="blog_name">
-                                    <a href="./read-articel.html">Prediction of Recurrence and Non recurrence Events of
-                                        Breast Cancer
-                                        using Bagging Algorithm</a>
-                                </div>
-                                <div class="blog_author">
-                                    <p>by, <a href="#">Mehedi Hassan et. al</a></p>
-                                </div>
-                                <div class="post_date">
-                                    <p> - June 27, 2022</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    @empty
+                    <p>No article Found.</p>
+                    @endforelse
                 </div>
             </div>
         </div>

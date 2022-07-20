@@ -11,5 +11,5 @@ class Researcher extends Model
 
 
 
-    public function publications(){return $this->belongsToMany(Article::class,'researcher_articles');}
+    public function publications(){return $this->belongsToMany(Article::class,'researcher_articles')->with('category');}
 }

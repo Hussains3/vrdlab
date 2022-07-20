@@ -18,10 +18,7 @@ class Article extends Model
 
 
     // public function category(){return $this->belongsTo(Category::class);}
-    public function category()
-    {
-      return $this->belongsTo(Category::class,'catetgory_id','id');
-    }
+    public function category(){return $this->belongsTo(Category::class,'category_id','id');}
     public function authours(){return $this->belongsToMany(Author::class,'author_articles');}
     public function researchers(){return $this->belongsToMany(Researcher::class,'researcher_articles');}
 }

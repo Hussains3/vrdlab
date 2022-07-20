@@ -24,7 +24,7 @@
                         </div>
                         <div class="mb-3">
                             <label for="catetgory_id" class="form-label">Category<span class="text-danger">*</span></label>
-                            <select name="catetgory_id" id="catetgory_id" class="form-control" required>
+                            <select name="category_id" id="category_id" class="form-control" required>
                                 <option value="">Select One</option>
                                 @foreach ($categories as $category)
                                 <option value="{{$category->id}}">{{$category->name}}</option>

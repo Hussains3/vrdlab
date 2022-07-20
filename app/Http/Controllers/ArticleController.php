@@ -49,7 +49,7 @@ class ArticleController extends Controller
         $article = new Article();
         $article->title = $request->title;
         $article->doi = $request->doi;
-        $article->catetgory_id = $request->catetgory_id;
+        $article->category_id = $request->category_id;
         $article->pub_date = $request->pub_date;
         $article->abstract = $request->abstract;
         $article->link = $request->link;
@@ -134,7 +134,7 @@ class ArticleController extends Controller
     {
         $article->title = $request->title;
         $article->doi = $request->doi;
-        $article->catetgory_id = $request->catetgory_id;
+        $article->category_id = $request->category_id;
         $article->pub_date = $request->pub_date;
         $article->abstract = $request->abstract;
         $article->link = $request->link;
