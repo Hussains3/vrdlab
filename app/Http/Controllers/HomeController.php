@@ -19,7 +19,7 @@ class HomeController extends Controller
     {
         $articles = Article::all();
         $researchers = Researcher::all();
-        return view('welcome',compact('article','researchers'));
+        return view('index',compact('articles','researchers'));
     }
 
     // Our Researcher Page
@@ -28,12 +28,20 @@ class HomeController extends Controller
         $researchers = Researcher::all();
         return view('our-researcher',compact('researchers'));
     }
+
+
     // Publication Page
     public function publications()
     {
         $categories = Category::all();
         $articles = Article::all();
         return view('publication',compact('articles','categories'));
+    }
+
+    // Researcher Publication/Profile
+    public function researcherpub(Researcher $researcher)
+    {
+        return $researcher;
     }
 
 

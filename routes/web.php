@@ -23,6 +23,7 @@ Auth::routes();
 Route::get('/', [HomeController::class, 'index'])->name('index');
 Route::get('/ourResearchers', [HomeController::class, 'ourResearchers'])->name('ourResearchers');
 Route::get('/publications', [HomeController::class, 'publications'])->name('publications');
+Route::get('/researcherpub/{reseracher}', [HomeController::class, 'researcherpub'])->name('researcherpub');
 
 Route::group(['middleware' => 'auth'], function() {
     Route::get('/vrdadmin', [HomeController::class, 'vrdadmin'])->name('vrdadmin');
