@@ -346,7 +346,7 @@ body {
 }
 
 .pub_aut_info a {
-    color: #2C3E50;
+    color: #3498DB;
     text-decoration: none;
 }
 
@@ -400,6 +400,7 @@ body {
     line-height: 18px;
     margin-top: 5px;
     color: #2C3E50;
+    padding-bottom: 20px;
 }
 
 .pub_aut_info span {
@@ -450,7 +451,7 @@ body {
 }
 
 .rSpace {
-    padding: 0px 20px 20px 20px;
+    padding: 20px 20px 20px 20px;
 
 }
 
@@ -472,8 +473,8 @@ body {
 
 .rStady {
     display: flex;
-
-
+    align-items: center;
+    margin-bottom: 5px;
 }
 
 .ricon {
@@ -487,6 +488,7 @@ body {
     font-size: 16px;
     line-height: 20px;
     color: #2C3E50;
+    text-align: justify;
 }
 
 .rechare_card {
@@ -1203,7 +1205,7 @@ body {
     }
 
     .fottter_left p {
-        text-align: center;
+        text-align: justify;
     }
 }
 
@@ -1240,6 +1242,7 @@ body {
     .nav_right a {
         display: block;
         margin-left: 20px;
+        padding: 10px 2px 0px 24px;
 
     }
 
@@ -1247,7 +1250,7 @@ body {
         display: none;
         position: absolute;
         left: 0px;
-        top: 60px;
+        top: 78px;
         background-color: #fff;
         height: 100%;
         transition: .3s all ease;
@@ -1268,6 +1271,7 @@ body {
         font-size: 24px;
     }
 }
+
 /* style.css */
 
 .article-hero_area {
@@ -1373,6 +1377,14 @@ body {
 
 }
 
+.read_head h2 {
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 35px;
+    color: #2C3E50;
+    margin-bottom: 18px;
+}
+
 .publish_card_read {
     background: #2C3E50;
     justify-content: space-around;
@@ -1453,6 +1465,9 @@ body {
 }
 
 /* ==================== */
+.ariticale_details {
+    margin-top: 40px !important;
+}
 
 .abostrac h2 {
     font-weight: 700;
@@ -1674,6 +1689,7 @@ body {
         text-align: left;
     }
 }
+
 /* =========Read article=========== */
 
 .our_recharcher {
@@ -1700,6 +1716,7 @@ body {
 .recharcher-bio {
     display: flex;
     justify-content: space-between;
+    margin-top: 10px;
 }
 
 .recharcher-bio button {
@@ -1708,6 +1725,12 @@ body {
     color: #3698DB;
     font-size: 14px;
 
+}
+
+.recharcher-bio a {
+    color: #3698DB;
+    font-size: 14px;
+    text-decoration: none;
 }
 
 .publication_link a {
@@ -2143,6 +2166,7 @@ body {
         width: 100%;
     }
 }
+
 /* =================Blog&publication============== */
 
 
@@ -2649,66 +2673,3 @@ p {
 }
 
 /* ==============slider css=============== */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

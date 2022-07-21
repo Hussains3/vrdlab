@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('title')
-    Article
+Article
 @endsection
 @section('content')
 <section class="article-hero_area">
@@ -12,7 +12,7 @@
         <div class="article_author_info">
             <p><span>by,</span>@foreach ($article->authours as $author)
                 <a href="{{$author->link}}" target="_black">{{$author->name}}</a>
-            @endforeach  - {{date('M d, Y', strtotime($article->pub_date))}}
+                @endforeach - {{date('M d, Y', strtotime($article->pub_date))}}
             </p>
             <p>Publisher : {{$article->publisher}}</p>
             <p>Total Citation: Cited by {{$article->citation}}</p>
@@ -47,20 +47,17 @@
                                 </div>
                                 <div class="shareSocial">
                                     <ul>
-                                        <li><a href="#"><span class="iconify"
-                                                    data-icon="entypo-social:facebook-with-circle"></span></a>
-                                        </li>
-                                        <li><a href="#"><span class="iconify"
-                                                    data-icon="entypo-social:linkedin-with-circle"></span></a>
-                                        </li>
-                                        <li><a href="#"><span class="iconify"
+                                        <li><a href="https://www.facebook.com/sharer/sharer.php?u={{$article->link}}"
+                                                target="_blank"><span class="iconify"
+                                                    data-icon="entypo-social:facebook-with-circle"></span></a></li>
+                                        <li><a href="https://www.linkedin.com/sharing/share-offsite/?url={{$article->link}}"
+                                                target="_blank"><span class="iconify"
+                                                    data-icon="entypo-social:linkedin-with-circle"></span></a></li>
+                                        <li><a href="mailto:https://mail.google.com/?subject=I wanted you to see this site&amp;body=Check out this site {{$article->link}}"
+                                                title="Share by Email"><span class="iconify"
                                                     data-icon="ant-design:google-circle-filled"></span></a></li>
-                                        <li><button class="clipboard"> <span class="iconify"
+                                        <li><button class="clipboard-link"> <span class="iconify"
                                                     data-icon="ant-design:copy-outlined"></span></button></li>
-                                        <li>
-                                            <p id="copy-message" style="display: none;"> Copied <span
-                                                    class="iconify" data-icon="charm:tick-double"></span></p>
-                                        </li>
                                     </ul>
 
                                 </div>
@@ -69,8 +66,12 @@
                     </div>
                 </div>
                 <div class="col-md-4">
+                    <div class="read_head">
+                        <h2> Read Latest Article</h2>
+                    </div>
                     @foreach ($relatedArticles as $article)
                     <div class="publish_card-area">
+
                         <div class="col-12">
 
                             <div class="publish_card_read">
@@ -84,7 +85,8 @@
                                 <div class="pub_aut_info_read">
                                     <p>by, @foreach ($article->authours as $author)
                                         <a href="{{$author->link}}">{{$author->name}}</a>,
-                                        @endforeach - {{date('M d, Y', strtotime($article->pub_date))}}</p>
+                                        @endforeach - {{date('M d, Y', strtotime($article->pub_date))}}
+                                    </p>
                                 </div>
                             </div>
                         </div>
