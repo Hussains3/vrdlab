@@ -2,7 +2,7 @@
     <div class="container">
         <div class="nav_area">
             <div class="nav_left">
-                <a href="#"><img src="./images/logo.png" alt=""></span></a>
+                <a href="#"><img src="{{asset('images/logo.png')}}" alt=""></span></a>
             </div>
             <!-- Toggle-menu -->
             <div class="toggle_btn" id="toggle" onclick="toggleMenu()">
