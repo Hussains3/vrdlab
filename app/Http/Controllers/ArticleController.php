@@ -132,6 +132,7 @@ class ArticleController extends Controller
      */
     public function update(UpdateArticleRequest $request, Article $article)
     {
+        $article = Article::find($article->id);
         $article->title = $request->title;
         $article->doi = $request->doi;
         $article->category_id = $request->category_id;
@@ -152,20 +153,48 @@ class ArticleController extends Controller
 
         $article->save();
 
-        if ($request->author_ids) {
-            foreach ($request->author_ids as $author_id) {
-                $aa = new AuthorArticle();
-                $aa->author_id = $author_id;
-                $aa->article_id = $article->id;
-                $aa->save();
+
+
+
+        /**
+         * Perform logic for updating Author Article
+         */
+        if ($request->author_ids){
+            $authorAlready = AuthorArticle::where('article_id',$article->id)->pluck('author_id')->toArray();
+            $newAuthors = array_diff($request->author_ids,$authorAlready);
+            $authorToDelete = array_diff($authorAlready,$request->author_ids);
+            if (count($newAuthors)){
+                foreach ($newAuthors as $author){
+                    $authorArticle[] = [
+                        'article_id' => $article->id,
+                        'author_id' => $author,
+                    ];
+                }
+                AuthorArticle::insert($authorArticle);
+            }
+            if ($authorToDelete){
+                AuthorArticle::whereIn('author_id',$authorToDelete)->where('article_id',$article->id)->delete();
             }
         }
-        if ($request->researchers) {
-            foreach ($request->researchers as $researcher) {
-                $ra = new ResearcherArticle();
-                $ra->researcher_id = $researcher;
-                $ra->article_id = $article->id;
-                $ra->save();
+
+        /**
+         * Perform logic for updating Researcher Article
+         */
+        if ($request->researchers){
+            $researcherAlready = ResearcherArticle::where('article_id',$article->id)->pluck('researcher_id')->toArray();
+            $newResearchers = array_diff($request->researchers,$researcherAlready);
+            $researcherToDelete = array_diff($researcherAlready,$request->researchers);
+            if (count($newResearchers)){
+                foreach ($newResearchers as $researcher){
+                    $researcherArticle[] = [
+                        'article_id' => $article->id,
+                        'researcher_id' => $researcher,
+                    ];
+                }
+                ResearcherArticle::insert($researcherArticle);
+            }
+            if ($researcherToDelete){
+                ResearcherArticle::whereIn('researcher_id',$researcherToDelete)->where('article_id',$article->id)->delete();
             }
         }
 
