@@ -316,13 +316,16 @@ header {
     border: none;
 }
 
-#copy-message-link {
+.copied{
+    font-size: 16px;
+}
+.copied,
+#copy-message {
     margin: 0;
     margin-top: 5px;
     color: #218838;
     transition: .3s all ease;
 }
-
 /* ===========recentPublish===== */
 
 .recentPublish {

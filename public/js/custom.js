@@ -91,21 +91,3 @@ var swiper = new Swiper(".recharchSwiper", {
     prevEl: ".swiper-button-prev",
   },
 });
-
-// ==============Copy Url============
-
-var $temp = $("<input>");
-var $url = $(location).attr("href");
-
-$(".clipboard").on("click", function () {
-  $("body").append($temp);
-  $temp.val($url).select();
-  document.execCommand("copy");
-  $temp.remove();
-  $("p#copy-message").fadeIn();
-  setTimeout(function () {
-    $("#copy-message").fadeOut(1000);
-  }, 500);
-  console.log("btn clicked");
-});
-// ================
