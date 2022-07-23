@@ -27,13 +27,14 @@ Home
                             </h2>
                         </div>
                         <div class="author_info">
-                            <p>
                             <p>by, @foreach ($article->authours as $author)
-                                <a href="{{$author->link}}">{{$author->name}}</a>
+                                <a href="{{$author->link}}">{{$author->name}}, </a>
                                 @endforeach
+                                <span>
+                                    - {{date('M d, Y', strtotime($article->pub_date))}}
+                                </span>
                             </p>
-                            - {{date('M d, Y', strtotime($article->pub_date))}}
-                            </p>
+
                             <div class="doi_area_link">
                                 <a href="{{$article->doi}}" target='_blank'><Span>DOI:</Span>{{$article->doi}}</a>
                             </div>
@@ -164,15 +165,70 @@ Home
                                         <p>{{ $researcher->reserch_area }}</p>
                                     </div>
                                 </div>
+                                <div class="recharcher-bio">
+                                    <button data-bs-toggle="modal"
+                                        data-bs-target="#exampleModal{{$researcher->id}}">Bibliography<span
+                                            class="iconify" data-icon="bx:right-arrow-alt"><span><button>
+
+                                                    <a href="{{ route('researcherpub', $researcher->id) }}">Publications<span
+                                                            class="iconify" data-icon="bx:right-arrow-alt"></span></a>
+
+                                </div>
                             </div>
                         </div>
                     </div>
+
                     @endforeach
                 </div>
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
             </div>
         </div>
+    </div>
+</section>
+<!-- =================modal content Area============================ -->
+<section>
+    <div class="modal_content_area">
+
+        @foreach ($researchers as $researcher)
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal{{$researcher->id}}" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="recharcher_info">
+                            <h3>About</h3>
+                            <p>{{ $researcher->bio }}
+                            </p>
+                        </div>
+                        <div class="modal-footer">
+                            @if ($researcher->website)
+                            <a href="{{ $researcher->website }}" target="_blank"><span class="iconify"
+                                    data-icon="bx:world"></span></a>
+                            @endif
+                            @if ($researcher->email)
+                            <a href="mailto:{{ $researcher->email }}"><span class="iconify"
+                                    data-icon="entypo:email"></span></a>
+                            @endif
+
+                            @if ($researcher->linkedin)
+                            <a href="{{ $researcher->linkedin }}" target="_blank"><span class="iconify"
+                                    data-icon="entypo-social:linkedin-with-circle"></span></a>
+                            @endif
+
+
+                        </div>
+
+                        <div class="recharcher_logo">
+                            <img src="{{ asset($researcher->uv_logo) }}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @endforeach
     </div>
 </section>
 <!-- ==============================Recharcer======================== -->

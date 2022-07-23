@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-md-4 ">
                     <div class="fottter_left">
-                        <a href="#"><img src="../images/logo-white.png" alt=""></a>
+                        <a href="#"><img src="{{asset('images/logo-w.svg')}}" alt=""></a>
                         <p>VRD research lab emphasizes innovation through research.</p>
                         <div class="footer_soical">
 
@@ -42,8 +42,8 @@
                             <div class="quick_list">
                                 <a href="#">Mission & Vision</a>
                                 <a href="#">Research Area</a>
-                                <a href="#">Authore</a>
-                                <a href="#">Publications & Blog</a>
+                                <a href="#">Author</a>
+                                <a href="{{route('publications')}}">Publications</a>
                             </div>
                         </div>
                     </div>
