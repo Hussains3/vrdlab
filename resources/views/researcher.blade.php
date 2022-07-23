@@ -29,9 +29,15 @@
                             <h2>{{$researcher->name}}</h2>
                             <small>{{$researcher->designation}}</small>
                             <div class="auth_social">
-                                <li><a href="#"><span class="iconify" data-icon="bx:world"></span></a></li>
-                                <li><a href="#"><span class="iconify" data-icon="bxl:gmail"></span></a></li>
-                                <li><a href="#"><span class="iconify" data-icon="entypo-social:linkedin-with-circle"></span></a></li>
+                                @if ($researcher->website)
+                                <li><a href="{{$researcher->website}}" target="_blank"><span class="iconify" data-icon="bx:world"></span></a></li>
+                                @endif
+                                @if ($researcher->email)
+                                <li><a href="mailto:{{$researcher->email}}" target="_blank"><span class="iconify" data-icon="bxl:gmail"></span></a></li>
+                                @endif
+                                @if ($researcher->linkedin)
+                                <li><a href="{{$researcher->linkedin}}" target="_blank"><span class="iconify" data-icon="entypo-social:linkedin-with-circle"></span></a></li>
+                                @endif
                             </div>
                         </div>
                     </div>

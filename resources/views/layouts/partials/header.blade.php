@@ -4,7 +4,7 @@
         <div class="container">
             <div class="nav_area navbar">
                 <div class="nav_left">
-                    <a href="https://vrdlab.com/"><img src="{{asset('images/logo.png')}}" alt=""></span></a>
+                    <a href="https://vrdlab.com/"><img src="{{asset('images/logo.svg')}}" alt="" width="180px"></span></a>
                 </div>
                 <!-- Toggle-menu -->
                 <div class="toggle_btn" id="toggle" onclick="toggleMenu()">

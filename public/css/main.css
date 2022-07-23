@@ -31,14 +31,15 @@ body {
 }
 
 .header_area {
-    background: #ffff;
     z-index: 11111111;
-    overflow: hidden;
     position: fixed;
     top: 0;
     width: 100%;
     background: #fff;
 
+}
+header {
+    position: relative;
 }
 
 .nav-area {
@@ -1248,7 +1249,7 @@ body {
 @media screen and (max-width:768px) {
 
 
-    .toggle_btn {
+    /* .toggle_btn {
         display: flex;
     }
 
@@ -1272,6 +1273,40 @@ body {
         -ms-transition: .3s all ease;
         -o-transition: .3s all ease;
     }
+
+    .rsearch,
+    .rmenu {
+        display: inline-block;
+    } */
+
+
+    .toggle_btn {
+        display: flex;
+    }
+
+    .nav_right a {
+        display: block;
+        margin-left: 20px;
+        padding: 10px 2px 0px 24px;
+
+    }
+
+    .nav_right {
+        display: none;
+        position: absolute;
+        padding-top: 30px;
+        left: -30px;
+        top: 70px;
+        background-color: #fff;
+        height: 100vh;
+        transition: .3s all ease;
+        -webkit-transition: .3s all ease;
+        -moz-transition: .3s all ease;
+        -ms-transition: .3s all ease;
+        -o-transition: .3s all ease;
+    }
+
+
 
     .rsearch,
     .rmenu {

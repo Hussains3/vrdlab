@@ -47,13 +47,13 @@ Article
                                 </div>
                                 <div class="shareSocial">
                                     <ul>
-                                        <li><a href="https://www.facebook.com/sharer/sharer.php?u={{$article->link}}"
+                                        <li><a href="https://www.facebook.com/sharer/sharer.php?u={{route('publication',$article->id)}}"
                                                 target="_blank"><span class="iconify"
                                                     data-icon="entypo-social:facebook-with-circle"></span></a></li>
-                                        <li><a href="https://www.linkedin.com/sharing/share-offsite/?url={{$article->link}}"
+                                        <li><a href="https://www.linkedin.com/sharing/share-offsite/?url={{route('publication',$article->id)}}"
                                                 target="_blank"><span class="iconify"
                                                     data-icon="entypo-social:linkedin-with-circle"></span></a></li>
-                                        <li><a href="mailto:https://mail.google.com/?subject=I wanted you to see this site&amp;body=Check out this site {{$article->link}}"
+                                        <li><a href="mailto:https://mail.google.com/?subject=I wanted you to see this site&amp;body=Check out this site {{route('publication',$article->id)}}"
                                                 title="Share by Email"><span class="iconify"
                                                     data-icon="ant-design:google-circle-filled"></span></a></li>
                                         <li><button class="clipboard-link"> <span class="iconify"

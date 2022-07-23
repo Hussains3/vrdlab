@@ -5,8 +5,7 @@
                 <div class="col-md-4 ">
                     <div class="fottter_left">
                         <a href="#"><img src="../images/logo-white.png" alt=""></a>
-                        <p>We are developing business idea with technology. Then we are analyzing market how we
-                            canranking up this start-up to top level.</p>
+                        <p>VRD research lab emphasizes innovation through research.</p>
                         <div class="footer_soical">
 
                             <li><a href="#"><span class="iconify"
