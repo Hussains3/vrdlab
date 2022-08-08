@@ -207,7 +207,7 @@
                                 </div>
                                 <div class="modal-footer">
                                     @if ($researcher->website)
-                                        <a href="{{ $researcher->website }}" target="_blank"><span class="iconify"
+                                        <a href="{{$researcher->website}}" target="_blank"><span class="iconify"
                                                 data-icon="bx:world"></span></a>
                                     @endif
                                     @if ($researcher->email)

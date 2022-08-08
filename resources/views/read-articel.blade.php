@@ -33,9 +33,13 @@
                 <div class="row">
                     <div class="col-md-8">
                         <div class="article_area">
+
                             <div class="article_text">
                                 <div class="abostrac">
-                                    <div class="h2">Abstract</div>
+                                    <h2>Abstract</h2>
+                                    <div class="pub_img_read">
+                                        <img src="{{ asset($article->cover) }}" alt="">
+                                    </div>
                                     <p>{{ $article->abstract }}</p>
                                     <div class="read_more">
                                         <a href="{{ $article->link }}" target="_blank">Read Full Paper</a>
