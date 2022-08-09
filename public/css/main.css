@@ -1791,11 +1791,21 @@ header {
     margin-top: 10px;
 }
 
-.recharcher-bio button {
+/* .recharcher-bio button {
     background-color: transparent;
     border: none;
     color: #3698DB;
     font-size: 14px;
+    display: block;
+
+
+} */
+.recharcher-bio p {
+    color: #3698DB;
+    font-size: 14px;
+    display: block;
+    cursor: pointer;
+
 
 }
 
@@ -1816,7 +1826,7 @@ header {
     text-decoration: none;
 }
 
-.recharcher-bio button:hover {
+.recharcher-bio p:hover {
     color: #fff;
 }
 
@@ -2732,11 +2742,6 @@ p {
     -ms-border-radius: 2px;
     -o-border-radius: 2px;
 }
-
-
-
-
-
 
 
 

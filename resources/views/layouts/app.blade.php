@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="{{asset('css/main.css')}}">
     <!-- ==================Swiper================== -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
     <!-- ==================Swiper================== -->
     <title>@yield('title')</title>
 </head>
