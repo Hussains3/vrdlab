@@ -172,7 +172,8 @@ Home
                                         <div class="recharcher-bio">
                                             <p data-bs-toggle="modal"
                                                 data-bs-target="#exampleModal{{ $researcher->id }}">Bibliography<span
-                                                    class="iconify" data-icon="bx:right-arrow-alt"><span></p>
+                                                    class="iconify" data-icon="bx:right-arrow-alt"><span>
+                                            </p>
 
                                             <a href="{{ route('researcherpub', $researcher->id) }}">Publications<span
                                                     class="iconify" data-icon="bx:right-arrow-alt"></span></a>

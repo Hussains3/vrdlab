@@ -44,12 +44,11 @@ Our Researcher
                                 </div>
                             </div>
                             <div class="recharcher-bio">
-                                <button data-bs-toggle="modal"
-                                    data-bs-target="#exampleModal{{$researcher->id}}">Bibliography<span class="iconify"
-                                        data-icon="bx:right-arrow-alt"><span><button>
+                                <p data-bs-toggle="modal" data-bs-target="#exampleModal{{$researcher->id}}">
+                                    Bibliography<span class="iconify" data-icon="bx:right-arrow-alt"><span></p>
 
-                                                <a href="{{ route('researcherpub', $researcher->id) }}">Publications<span
-                                                        class="iconify" data-icon="bx:right-arrow-alt"></span></a>
+                                <a href="{{ route('researcherpub', $researcher->id) }}">Publications<span
+                                        class="iconify" data-icon="bx:right-arrow-alt"></span></a>
                             </div>
                         </div>
                     </div>
