@@ -17,50 +17,49 @@ Our Researcher
 <section>
     <div class="reacher our_recharcher">
         <div class="container">
-            <div class="recharchr_slide recharchSwiper swiper ">
-                <div class=" swiper-wrapper">
-                    @foreach ($researchers as $researcher)
-                    <div class="swiper-slide">
-                        <div class="rechare_card">
-                            <div class="rcard_img">
-                                <img src="{{ asset($researcher->photo) }}" alt="">
+            <div class="row">
+                @foreach ($researchers as $researcher)
+                <div class="col-md-4">
+                    <div class="rechare_card">
+                        <div class="rcard_img">
+                            <img src="{{ asset($researcher->photo) }}" alt="">
+                        </div>
+                        <div class="rInfo">
+                            <h2>{{ $researcher->name }}</h2>
+                            <p>{{ $researcher->designation }}</p>
+                        </div>
+                        <div class="rSpace">
+                            <div class="rStady">
+                                <div class="ricon"><span class="iconify" data-icon="fa-solid:university"></span>
+                                </div>
+                                <div class="rtext">
+                                    <p>{{ $researcher->uv_name }}</p>
+                                </div>
                             </div>
-                            <div class="rInfo">
-                                <h2>{{ $researcher->name }}</h2>
-                                <p>{{ $researcher->designation }}</p>
+                            <div class="rStady">
+                                <div class="ricon"><span class="iconify" data-icon="simple-line-icons:doc"></span>
+                                </div>
+                                <div class="rtext">
+                                    <p>{{ $researcher->reserch_area }}</p>
+                                </div>
                             </div>
-                            <div class="rSpace">
-                                <div class="rStady">
-                                    <div class="ricon"><span class="iconify" data-icon="fa-solid:university"></span>
-                                    </div>
-                                    <div class="rtext">
-                                        <p>{{ $researcher->uv_name }}</p>
-                                    </div>
-                                </div>
-                                <div class="rStady">
-                                    <div class="ricon"><span class="iconify" data-icon="simple-line-icons:doc"></span>
-                                    </div>
-                                    <div class="rtext">
-                                        <p>{{ $researcher->reserch_area }}</p>
-                                    </div>
-                                </div>
-                                <div class="recharcher-bio">
-                                    <button data-bs-toggle="modal"
-                                        data-bs-target="#exampleModal{{$researcher->id}}">Bibliography<span
-                                            class="iconify" data-icon="bx:right-arrow-alt"><span><button>
+                            <div class="recharcher-bio">
+                                <button data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal{{$researcher->id}}">Bibliography<span class="iconify"
+                                        data-icon="bx:right-arrow-alt"><span><button>
 
-                                                    <a href="{{ route('researcherpub', $researcher->id) }}">Publications<span
-                                                            class="iconify" data-icon="bx:right-arrow-alt"></span></a>
-
-                                </div>
+                                                <a href="{{ route('researcherpub', $researcher->id) }}">Publications<span
+                                                        class="iconify" data-icon="bx:right-arrow-alt"></span></a>
                             </div>
                         </div>
                     </div>
-                    @endforeach
                 </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
+                @endforeach
             </div>
+
+
+
+
         </div>
     </div>
 </section>
@@ -107,6 +106,7 @@ Our Researcher
             </div>
         </div>
         @endforeach
+
     </div>
 </section>
 @endsection

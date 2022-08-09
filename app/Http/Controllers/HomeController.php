@@ -26,7 +26,7 @@ class HomeController extends Controller
     // Our Researcher Page
     public function ourResearchers()
     {
-        $researchers = Researcher::all();
+        $researchers = Researcher::paginate(20);
         return view('our-researcher',compact('researchers'));
     }
 
