@@ -316,9 +316,10 @@ header {
     border: none;
 }
 
-.copied{
+.copied {
     font-size: 16px;
 }
+
 .copied,
 #copy-message {
     margin: 0;
@@ -326,6 +327,7 @@ header {
     color: #218838;
     transition: .3s all ease;
 }
+
 /* ===========recentPublish===== */
 
 .recentPublish {
@@ -514,6 +516,7 @@ header {
 .rechare_card {
     position: relative;
     overflow: hidden;
+    margin-bottom: 30px;
 
 }
 
@@ -1460,6 +1463,7 @@ header {
     width: 100%;
     height: auto;
 }
+
 .abostrac .pub_img_read img {
     margin-bottom: 20px;
 }

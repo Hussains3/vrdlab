@@ -150,4 +150,5 @@ class ResearcherController extends Controller
         return redirect()->route('researchers.index')
         ->withSuccess(__('Researcher Deleted.'));
     }
+
 }
