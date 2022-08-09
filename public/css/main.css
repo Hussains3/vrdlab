@@ -1791,16 +1791,9 @@ header {
     margin-top: 10px;
 }
 
-/* .recharcher-bio button {
+.recharcher-bio p {
     background-color: transparent;
     border: none;
-    color: #3698DB;
-    font-size: 14px;
-    display: block;
-
-
-} */
-.recharcher-bio p {
     color: #3698DB;
     font-size: 14px;
     display: block;
