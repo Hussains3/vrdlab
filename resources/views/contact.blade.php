@@ -24,7 +24,7 @@ Contact
                             Khulna 9100, Bangladesh</p>
 
                     </div>
-                    <div class="card_back">'
+                    <div class="card_back">
 
                     </div>
                 </div>
@@ -39,7 +39,7 @@ Contact
                         <p>+880 1902 624 501</p>
 
                     </div>
-                    <div class="card_back">'
+                    <div class="card_back">
 
                     </div>
                 </div>
@@ -53,7 +53,7 @@ Contact
                         <p>contact@vrdlab.com</p>
 
                     </div>
-                    <div class="card_back">'
+                    <div class="card_back">
 
                     </div>
                 </div>
