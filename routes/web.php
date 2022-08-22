@@ -35,5 +35,3 @@ Route::group(['middleware' => 'auth'], function() {
     Route::resource('researchers', ResearcherController::class);
     Route::resource('articles', ArticleController::class);
 });
-
-

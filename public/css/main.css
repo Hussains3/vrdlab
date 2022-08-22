@@ -3004,3 +3004,250 @@ p {
         margin-bottom: 20px;
     }
 }
+
+/* =================Contact=============== */
+.get_in_touch {
+    background: #2C3E50;
+    padding-top: 48px;
+    padding-bottom: 48px;
+}
+
+.get_in_touch h1 {
+    font-weight: 600;
+    font-size: 54px;
+    line-height: 82px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+
+
+.contact {
+    margin-top: 60px;
+    margin-bottom: 80px;
+}
+
+.card_main {
+    text-align: center;
+    padding: 30px;
+    position: relative;
+    cursor: pointer;
+
+
+
+}
+
+.card_details {
+    display: flex;
+    flex-direction: column;
+    height: 180px;
+}
+
+.card_back {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transition: .8s all ease;
+    z-index: -222;
+}
+
+.card_main:hover .card_back {
+    transform: rotateY(-180deg);
+    background: #3498DB;
+
+}
+
+.card_main:hover .card_icon {
+    color: #fff
+}
+
+.card_main:hover .card_details p {
+    color: #fff;
+}
+
+.card_icon {
+    font-size: 34px;
+    color: #2C3E50;
+
+    transition: .8s all ease;
+
+}
+
+.card_main:hover .card_icon {
+    transform: rotateY(180deg);
+}
+
+.card_details p {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    color: #2C3E50;
+    transition: .8s all ease;
+    margin: 10px;
+}
+
+/* ===============Contac Form============ */
+.contact_form {
+    padding-top: 100px;
+    padding-bottom: 130px;
+    background: #3498DB;
+}
+
+
+.form {
+
+    width: 650px;
+    margin: 0 auto;
+
+}
+
+.input input {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 35px;
+    border: none;
+    padding: 5px 32px;
+    font-size: 18px;
+    line-height: 20px;
+    color: rgba(44, 62, 80, 0.5)
+}
+
+.input input ::placeholder {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: rgba(44, 62, 80, 0.5);
+}
+
+.input input:focus {
+    outline: none;
+    border: none;
+}
+
+.text_area textarea {
+    width: 100%;
+    border: none;
+    padding: 32px;
+    font-size: 18px;
+    line-height: 20px;
+    color: rgba(44, 62, 80, 0.5)
+}
+
+.text_area textarea:focus {
+    outline: none;
+    border: none;
+}
+
+.submit {
+    text-align: center;
+}
+
+.submit button {
+    border: none;
+    outline: none;
+    padding: 10px 50px;
+    margin-top: 40px;
+    background: #2C3E50;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+/* ========Resonsive=================== */
+@media screen and (max-width:320px) {
+    .get_in_touch h1 {
+        font-size: 30px;
+        line-height: 30px;
+    }
+
+    .card_details {
+        height: 140px;
+    }
+
+    .form {
+        width: 300px;
+        margin: 0 auto;
+    }
+
+    .card_details p {
+        font-size: 18px;
+        line-height: 24px;
+
+    }
+
+    .contact {
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+
+    .contact_form {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .input input {
+        height: 40px;
+        margin-bottom: 15px;
+
+    }
+
+    .submit button {
+        margin-top: 10px;
+    }
+
+}
+
+@media screen and (max-width:576px) {
+    .form {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .card_details p {
+        font-size: 18px;
+        line-height: 24px;
+
+    }
+
+    .contact {
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+
+    .contact_form {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .input input {
+        width: 100%;
+        height: 50px;
+        margin-bottom: 35px;
+        border: transparent;
+        padding: 5px 32px;
+        font-size: 18px;
+        line-height: 20px;
+        color: rgba(44, 62, 80, 0.5);
+        border-radius: 5px !important;
+        -webkit-border-radius: 5px !important;
+        -moz-border-radius: 5px !important;
+        -ms-border-radius: 5px !important;
+        -o-border-radius: 5px !important;
+    }
+
+    .submit button {
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .form {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
