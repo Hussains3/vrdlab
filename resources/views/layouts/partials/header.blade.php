@@ -14,9 +14,9 @@
                 <div class="nav_right" id="mobileMenu">
                     <a href="{{route('index')}}">Home</a>
                     <a href="{{route('ourResearchers')}}">Our Researchers</a>
-                    <a href="#">Research Area</a>
+                    <a href="{{route('researcher-area')}}">Research Area</a>
                     <a href="{{route('publications')}}">Publications</a>
-                    <a href="#">Contact Us</a>
+                    <a href="{{route('contact')}}">Contact Us</a>
                     <!-- <a href="./author.html">Author</a>
                 <a href="#"><span class="iconify" data-icon="bi:search"></span></a>
                 <a href="#"><span class="iconify" data-icon="ant-design:menu-outlined"></span></a> -->

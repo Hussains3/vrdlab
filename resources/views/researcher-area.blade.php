@@ -37,7 +37,7 @@ Researcher area
                 <div class="col-md-4">
                     <div class="contex_card">
                         <div class="contex_img">
-                            <img src="./img/pbulishCard3.jpg" alt="">
+                            <img src="{{asset('images/pbulishCard3.jpg')}}" alt="">
                         </div>
                         <div class="contex_details">
                             <h2>Collective Collection</h2>
@@ -61,7 +61,7 @@ Researcher area
                 <div class="col-md-4">
                     <div class="contex_card">
                         <div class="contex_img">
-                            <img src="./img/pbulishCard3.jpg" alt="">
+                            <img src="{{asset('images/pbulishCard3.jpg')}}" alt="">
                         </div>
                         <div class="contex_details">
                             <h2>Collective Collection</h2>
@@ -85,7 +85,7 @@ Researcher area
                 <div class="col-md-4">
                     <div class="contex_card">
                         <div class="contex_img">
-                            <img src="./img/pbulishCard3.jpg" alt="">
+                            <img src="{{asset('images/pbulishCard3.jpg')}}" alt="">
                         </div>
                         <div class="contex_details">
                             <h2>Collective Collection</h2>

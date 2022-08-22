@@ -1581,6 +1581,10 @@ header {
     border: none;
 }
 
+.shareSocial button:hover {
+    color: #3498DB;
+}
+
 #copy-message {
     margin: 0;
     margin-top: 5px;
@@ -2764,6 +2768,7 @@ p {
 .research_area {
     background: #2C3E50;
     padding: 80px 0px 80px 0px;
+    margin-top: 80px;
 
 }
 
@@ -2870,6 +2875,7 @@ p {
     line-height: 30px;
     text-align: center;
     color: #2C3E50;
+    margin-top: 20px;
 }
 
 .contex_details p {
@@ -3010,6 +3016,7 @@ p {
     background: #2C3E50;
     padding-top: 48px;
     padding-bottom: 48px;
+    margin-top: 80px;
 }
 
 .get_in_touch h1 {

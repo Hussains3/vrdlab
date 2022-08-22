@@ -27,6 +27,14 @@ Route::get('/authorswiew', [HomeController::class, 'authorswiew'])->name('author
 Route::get('/researcherpub/{researcher}', [HomeController::class, 'researcherpub'])->name('researcherpub');
 Route::get('/publication/{article}', [HomeController::class, 'publication'])->name('publication');
 Route::get('/category/{category}', [HomeController::class, 'category'])->name('category');
+Route::get('contact', function ()
+{
+    return view('contact');
+})->name('contact');
+Route::get('researcher-area', function ()
+{
+    return view('researcher-area');
+})->name('researcher-area');
 
 Route::group(['middleware' => 'auth'], function() {
     Route::get('/vrdadmin', [HomeController::class, 'vrdadmin'])->name('vrdadmin');
