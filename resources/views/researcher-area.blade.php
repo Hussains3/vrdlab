@@ -7,7 +7,7 @@ Researcher area
     <div class="research_area">
         <div class="container">
             <div class="search_here">
-                <h2>Search</h2>
+                <h2>Research area</h2>
             </div>
             <div class="search_form">
                 <form action="">
@@ -37,75 +37,159 @@ Researcher area
                 <div class="col-md-4">
                     <div class="contex_card">
                         <div class="contex_img">
-                            <img src="{{asset('images/pbulishCard3.jpg')}}" alt="">
+                            <a href="#">
+                                <img src="{{ asset('images/pbulishCard3.jpg') }}" />
+                            </a>
                         </div>
                         <div class="contex_details">
-                            <h2>Collective Collection</h2>
-                            <p id="context">Libraries are embedded in an increasingly complex network of
-                                information
-                                supply and
-                                demand. Our goal is to provide
-                                evidence and insight to libraries as they organize collections and services within
-                                this changing network environment.
-                                Libraries are embedded in an increasingly complex network of information
-                                supply and
-
-                            </p>
-
-                        </div>
-                        <div class="context_read_more">
-                            <button>Read More</button>
+                            <a href="#">
+                                <h2>Collective Collection</h2>
+                            </a>
+                            <a href="#">
+                                <p>Libraries are embedded in an increasingly complex network of
+                                    information
+                                    supply and
+                                    demand. Our goal is to provide
+                                    evidence and insight to libraries as they organize collections and services
+                                    within
+                                    this changing network environment.
+                                </p>
+                            </a>
                         </div>
                     </div>
                 </div>
+
                 <div class="col-md-4">
                     <div class="contex_card">
                         <div class="contex_img">
-                            <img src="{{asset('images/pbulishCard3.jpg')}}" alt="">
+                            <a href="#">
+                                <img src="{{ asset('images/publishCard1.jpg') }}" />
+                            </a>
                         </div>
                         <div class="contex_details">
-                            <h2>Collective Collection</h2>
-                            <p id="context">Libraries are embedded in an increasingly complex network of
-                                information
-                                supply and
-                                demand. Our goal is to provide
-                                evidence and insight to libraries as they organize collections and services within
-                                this changing network environment.
-                                Libraries are embedded in an increasingly complex network of information
-                                supply and
-
-                            </p>
-
-                        </div>
-                        <div class="context_read_more">
-                            <button>Read More</button>
+                            <a href="#">
+                                <h2>Collective Collection</h2>
+                            </a>
+                            <a href="#">
+                                <p>Libraries are embedded in an increasingly complex network of
+                                    information
+                                    supply and
+                                    demand. Our goal is to provide
+                                    evidence and insight to libraries as they organize collections and services
+                                    within
+                                    this changing network environment.
+                                </p>
+                            </a>
                         </div>
                     </div>
                 </div>
+
                 <div class="col-md-4">
                     <div class="contex_card">
                         <div class="contex_img">
-                            <img src="{{asset('images/pbulishCard3.jpg')}}" alt="">
+                            <a href="#">
+                                <img src="{{ asset('images/publishCard2.jpg') }}" />
+                            </a>
                         </div>
                         <div class="contex_details">
-                            <h2>Collective Collection</h2>
-                            <p id="context">Libraries are embedded in an increasingly complex network of
-                                information
-                                supply and
-                                demand. Our goal is to provide
-                                evidence and insight to libraries as they organize collections and services within
-                                this changing network environment.
-                                Libraries are embedded in an increasingly complex network of information
-                                supply and
-
-                            </p>
-
-                        </div>
-                        <div class="context_read_more">
-                            <button>Read More</button>
+                            <a href="#">
+                                <h2>Collective Collection</h2>
+                            </a>
+                            <a href="#">
+                                <p>Libraries are embedded in an increasingly complex network of
+                                    information
+                                    supply and
+                                    demand. Our goal is to provide
+                                    evidence and insight to libraries as they organize collections and services
+                                    within
+                                    this changing network environment.
+                                </p>
+                            </a>
                         </div>
                     </div>
                 </div>
+
+
+                <div class="col-md-4">
+                    <div class="contex_card">
+                        <div class="contex_img">
+                            <a href="#">
+                                <img src="{{ asset('images/publishCard1.jpg') }}" />
+                            </a>
+                        </div>
+                        <div class="contex_details">
+                            <a href="#">
+                                <h2>Collective Collection</h2>
+                            </a>
+                            <a href="#">
+                                <p>Libraries are embedded in an increasingly complex network of
+                                    information
+                                    supply and
+                                    demand. Our goal is to provide
+                                    evidence and insight to libraries as they organize collections and services
+                                    within
+                                    this changing network environment.
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="contex_card">
+                        <div class="contex_img">
+                            <a href="#">
+                                <img src="{{ asset('images/pbulishCard3.jpg') }}" />
+                            </a>
+                        </div>
+                        <div class="contex_details">
+                            <a href="#">
+                                <h2>Collective Collection</h2>
+                            </a>
+                            <a href="#">
+                                <p>Libraries are embedded in an increasingly complex network of
+                                    information
+                                    supply and
+                                    demand. Our goal is to provide
+                                    evidence and insight to libraries as they organize collections and services
+                                    within
+                                    this changing network environment.
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-4">
+                    <div class="contex_card">
+                        <div class="contex_img">
+                            <a href="#">
+                                <img src="{{ asset('images/publishCard2.jpg') }}" />
+                            </a>
+                        </div>
+                        <div class="contex_details">
+                            <a href="#">
+                                <h2>Collective Collection</h2>
+                            </a>
+                            <a href="#">
+                                <p>Libraries are embedded in an increasingly complex network of
+                                    information
+                                    supply and
+                                    demand. Our goal is to provide
+                                    evidence and insight to libraries as they organize collections and services
+                                    within
+                                    this changing network environment.
+
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
 
             </div>
 
