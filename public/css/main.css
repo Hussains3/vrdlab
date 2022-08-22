@@ -695,6 +695,10 @@ header {
     color: #3498DB;
 }
 
+.footer_bottom a {
+    text-decoration: none;
+}
+
 .toggle_btn {
     display: none;
 }
