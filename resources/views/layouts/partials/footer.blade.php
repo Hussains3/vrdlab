@@ -53,7 +53,9 @@
         </div>
     </div>
     <div class="footer_bottom">
-        <p><span class="iconify" data-icon="icon-park-twotone:handle-c"></span>2022 The Virtual BD. All Rights
-            Reserved.</p>
+        <p><span class="iconify" data-icon="icon-park-twotone:handle-c"></span>
+            <a href="https://vrdlab.com/">2022 The Virtual BD. All Rights
+                Reserved.</a>
+        </p>
     </div>
 </footer>

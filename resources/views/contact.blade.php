@@ -67,6 +67,12 @@ Contact
         <form action="">
             <div class="form">
                 <div class="input">
+                    <input type="text" placeholder="Name">
+                </div>
+                <div class="input">
+                    <input type="email" placeholder="Email">
+                </div>
+                <div class="input">
                     <input type="text" placeholder="University Name">
                 </div>
                 <div class="input">
