@@ -64,10 +64,12 @@ Home
                                             title="Share by Email"><span class="iconify"
                                                 data-icon="ant-design:google-circle-filled"></span></a></li>
                                     <li><button class="clipboard-link" onclick="copyUrl({{ $article->id }})">
-                                            <span class="iconify" data-icon="ant-design:copy-outlined"></span><span
-                                                class="copied" id="copied{{ $article->id }}"
-                                                style="display:none;">Copied.</span></button>
+                                            <span class="iconify" data-icon="ant-design:copy-outlined"></span>
+                                            <br>
+
                                     </li>
+                                    <span class="copied" id="copied{{ $article->id }}"
+                                        style="display:none;">Copied.</span></button>
                                 </ul>
 
                             </div>
