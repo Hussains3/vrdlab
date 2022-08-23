@@ -92,3 +92,23 @@ var swiper = new Swiper(".recharchSwiper", {
         prevEl: ".swiper-button-prev",
     },
 });
+// ===================Active=============
+const currlocation = window.location.href;
+const menuItem = document.querySelectorAll(".active_menu ul a");
+const menuLength = menuItem.length;
+for (let i = 0; i < menuLength; i++) {
+    if (menuItem[i].href === currlocation) {
+        menuItem[i].className = "active";
+    }
+}
+// ============Limit charset========
+$("div, p").each(function () {
+    var textMaxChar = $(this).attr("data-max-characters");
+
+    length = $(this).text().length;
+    if (length > textMaxChar) {
+        $(this).text($(this).text().substr(0, textMaxChar) + "");
+    }
+});
+
+// ===========================

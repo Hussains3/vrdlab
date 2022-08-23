@@ -15,6 +15,7 @@
 
     <!-- ==================Swiper================== -->
     <title>@yield('title')</title>
+
 </head>
 
 <body>
