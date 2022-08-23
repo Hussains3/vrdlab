@@ -21,7 +21,7 @@ Our Researcher
                 @foreach ($researchers as $researcher)
                 <div class="col-md-4">
                     <div class="rechare_card">
-                        <div class="rcard_img" style="background-image: url({{asset($researcher->photo)}})">
+                        <div class="rcard_img" style="background-image: url('{{asset($researcher->photo)}}')">
                             <div class="image_round"></div>
                             <!-- <img src="{{ asset($researcher->photo) }}" alt=""> -->
                         </div>
