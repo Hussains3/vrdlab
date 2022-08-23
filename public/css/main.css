@@ -459,14 +459,14 @@ header {
 } */
 
 .rcard_img {
-    /* background-image: url('../images/a2.jpg'); */
-    background-position: center center;
+    background-image: url('../images/a2.jpg');
+    background-position: top center;
     background-repeat: no-repeat;
     border-radius: 50%;
     width: 300px;
     height: 300px;
-    margin: 15px auto;
-
+    margin: 20px auto;
+    background-size: cover;
 }
 
 .image_round {
