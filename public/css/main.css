@@ -452,10 +452,34 @@ header {
     margin-bottom: 20px;
 }
 
-.rcard_img {
+/* .rcard_img {
     display: flex;
     justify-content: center;
     padding: 30px;
+} */
+
+.rcard_img {
+    /* background-image: url('../images/a2.jpg'); */
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    margin: 15px auto;
+
+}
+
+.image_round {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    background-color: red;
+    opacity: 0;
+
 }
 
 .rechare_card {
@@ -700,11 +724,12 @@ header {
 .footer_bottom p {
     font-weight: 700;
     font-size: 15px;
-    color: #3498DB;
+    color: #2C3E50;
 }
 
 .footer_bottom a {
     text-decoration: none;
+    color: #3498DB;
 }
 
 .toggle_btn {
@@ -3228,6 +3253,21 @@ p {
     font-weight: 400;
     font-size: 18px;
     line-height: 30px;
+    transition: .3s all ease;
+    -webkit-transition: .3s all ease;
+    -moz-transition: .3s all ease;
+    -ms-transition: .3s all ease;
+    -o-transition: .3s all ease;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+
+.submit button:hover {
+    color: #2C3E50;
+    background: #ffff;
 }
 
 /* ========Resonsive=================== */
