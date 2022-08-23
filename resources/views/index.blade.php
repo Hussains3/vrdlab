@@ -38,8 +38,8 @@ Home
                                 <a href="{{ $article->doi }}" target='_blank'><Span>DOI:</Span>{{ $article->doi }}</a>
                             </div>
                         </div>
-                        <div class="show_img">
-                            <img src="{{ asset($article->cover) }}" alt="">
+                        <div class="show_img" style="background-image: url('{{asset($article->cover)}}')">
+                            <!-- <img src="{{ asset($article->cover) }}" alt=""> -->
                         </div>
                         <div class="doiDes">
                             <h2>Abstract</h2>
@@ -101,8 +101,9 @@ Home
                     @foreach ($articles as $article)
                     <div class="swiper-slide">
                         <div class="publish_card">
-                            <div class="pub_img">
-                                <img src="{{ asset($article->cover) }}" alt="">
+                            <div class="pub_img" style="background-image: url('{{asset($article->cover)}}')">
+                                <!-- <img src="{{ asset($article->cover) }}" alt=""> -->
+                                <div class="pub_img_blank"></div>
                             </div>
                             <div class="publish_des">
                                 <small>{{ $article->category->name }}</small>
@@ -147,8 +148,10 @@ Home
                             <div class="swiper-slide">
 
                                 <div class="rechare_card">
-                                    <div class="rcard_img">
-                                        <img src="{{ $researcher->photo }}" alt="">
+                                    <div class="rcard_img"
+                                        style="background-image: url('{{asset($researcher->photo)}}')">
+                                        <!-- <img src="{{ $researcher->photo }}" alt=""> -->
+                                        <div class="image_round"></div>
                                     </div>
                                     <div class="rInfo">
                                         <h2>{{ $researcher->name }}</h2>
@@ -257,6 +260,7 @@ function copyUrl(id) {
 }
 </script>
 @endsection
+
 
 
 
