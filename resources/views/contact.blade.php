@@ -64,6 +64,10 @@ Contact
 <!-- ================contact info========================= -->
 <section class="contact_form">
     <div class="container">
+        <div class="contact_text">
+            <h2>Leave a message</h2>
+        </div>
+
         <form action="">
             <div class="form">
                 <div class="input">

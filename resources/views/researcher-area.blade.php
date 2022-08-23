@@ -46,13 +46,19 @@ Researcher area
                                 <h2>Collective Collection</h2>
                             </a>
                             <a href="#">
-                                <p>Libraries are embedded in an increasingly complex network of
+                                <p class="letme" data-max-characters="500">Libraries are embedded in an increasingly
+                                    complex
+                                    network
+                                    of
                                     information
                                     supply and
                                     demand. Our goal is to provide
                                     evidence and insight to libraries as they organize collections and services
                                     within
                                     this changing network environment.
+                                    embedded in an increasingly complex network
+
+
                                 </p>
                             </a>
                         </div>
@@ -71,13 +77,18 @@ Researcher area
                                 <h2>Collective Collection</h2>
                             </a>
                             <a href="#">
-                                <p>Libraries are embedded in an increasingly complex network of
+                                <p class="letme" data-max-characters="500">Libraries are embedded in an increasingly
+                                    complex
+                                    network
+                                    of
                                     information
                                     supply and
                                     demand. Our goal is to provide
                                     evidence and insight to libraries as they organize collections and services
                                     within
                                     this changing network environment.
+                                    embedded in an increasingly complex network
+
                                 </p>
                             </a>
                         </div>
@@ -96,13 +107,18 @@ Researcher area
                                 <h2>Collective Collection</h2>
                             </a>
                             <a href="#">
-                                <p>Libraries are embedded in an increasingly complex network of
+                                <p class="letme" data-max-characters="500">Libraries are embedded in an increasingly
+                                    complex
+                                    network
+                                    of
                                     information
                                     supply and
                                     demand. Our goal is to provide
                                     evidence and insight to libraries as they organize collections and services
                                     within
                                     this changing network environment.
+                                    embedded in an increasingly complex network
+
                                 </p>
                             </a>
                         </div>
@@ -122,13 +138,18 @@ Researcher area
                                 <h2>Collective Collection</h2>
                             </a>
                             <a href="#">
-                                <p>Libraries are embedded in an increasingly complex network of
+                                <p class="letme" data-max-characters="500">Libraries are embedded in an increasingly
+                                    complex
+                                    network
+                                    of
                                     information
                                     supply and
                                     demand. Our goal is to provide
                                     evidence and insight to libraries as they organize collections and services
                                     within
                                     this changing network environment.
+                                    embedded in an increasingly complex network
+
                                 </p>
                             </a>
                         </div>
@@ -147,13 +168,18 @@ Researcher area
                                 <h2>Collective Collection</h2>
                             </a>
                             <a href="#">
-                                <p>Libraries are embedded in an increasingly complex network of
+                                <p class="letme" data-max-characters="500">Libraries are embedded in an increasingly
+                                    complex
+                                    network
+                                    of
                                     information
                                     supply and
                                     demand. Our goal is to provide
                                     evidence and insight to libraries as they organize collections and services
                                     within
                                     this changing network environment.
+                                    embedded in an increasingly complex network
+
                                 </p>
                             </a>
                         </div>
@@ -162,7 +188,7 @@ Researcher area
 
 
                 <div class="col-md-4">
-                    <div class="contex_card">
+                    <div class="contex_card ">
                         <div class="contex_img">
                             <a href="#">
                                 <img src="{{ asset('images/publishCard2.jpg') }}" />
@@ -173,13 +199,17 @@ Researcher area
                                 <h2>Collective Collection</h2>
                             </a>
                             <a href="#">
-                                <p>Libraries are embedded in an increasingly complex network of
+                                <p class="letme" data-max-characters="500">Libraries are embedded in an increasingly
+                                    complex
+                                    network
+                                    of
                                     information
                                     supply and
                                     demand. Our goal is to provide
                                     evidence and insight to libraries as they organize collections and services
                                     within
                                     this changing network environment.
+                                    embedded in an increasingly complex network
 
                                 </p>
                             </a>
